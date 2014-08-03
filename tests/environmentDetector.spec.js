@@ -9,13 +9,13 @@ describe("environmentDetector", function(){
     it("should be an object.", function(){
         var environmentDetecor = require('../lib/config/environmentDetector')
         expect(typeof environmentDetecor).toEqual('object');
-        expect(typeof environmentDetecor.detect).toEqual('function');
+        expect(typeof environmentDetecor.detect).toEqual("function");
     });
 
     describe("should have a method detect and", function(){
         it("should be callabe", function(){
             var environmentDetecor = require('../lib/config/environmentDetector')
-            expect(typeof environmentDetecor.detect).toEqual('function');
+            expect(typeof environmentDetecor.detect).toEqual("function");
         })
 
         it("should return an environment name which this running machine belongs to.", function(){
@@ -26,7 +26,7 @@ describe("environmentDetector", function(){
                     development: ['sfhshdfhhskd', os.hostname()],
                     production: ['hfhhsdjjsd']
                 }
-            )).toEqual('development');
+            )).toEqual("development");
         });
 
         it("should return 'production' as environment there is no environment specified with running machine.", function(){
@@ -36,9 +36,14 @@ describe("environmentDetector", function(){
                     development: ['sfhshdfhhskd','sdsa'],
                     production: ['hfhhsdjjsd']
                 }
-            )).toEqual('production');
+            )).toEqual("production");
 
-            expect(environmentDetecor.detect({})).toEqual('production');
+            expect(environmentDetecor.detect({})).toEqual("production");
+        });
+
+        it("should return response of callback method provided as environment.", function(){
+            var environmentDetecor = require('../lib/config/environmentDetector');
+            expect(environmentDetecor.detect(function(){ return "myEnvlogic"})).toEqual("myEnvlogic");
         });
     });
 })
