@@ -4,7 +4,7 @@
     "description": "An advanced NodeJs configuration loader and manager which can load configuration values based on the development environement.",
     "main": "index.js",
     "scripts": {
-        "test": "echo jasmine-node ./tests"
+        "test": "jasmine-node ./tests"
     },
     "dependencies": {
         "lodash": "^2.4.1"
