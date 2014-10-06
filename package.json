@@ -7,7 +7,7 @@
         "test": "jasmine-node ./tests"
     },
     "dependencies": {
-        "lodash": "^2.4.1"
+        "lodash": "~2.4.1"
     },
     "devDependencies": {
         "jasmine-node": "1.3.1"
