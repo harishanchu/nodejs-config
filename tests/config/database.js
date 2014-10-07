@@ -21,8 +21,8 @@ var config = {
             'collation': 'utf8_unicode_ci',
             'prefix': 'pm_'
         },
-        
-        'mongodb' : {
+
+        'mongodb': {
             'driver': 'mongodb',
             'host': 'mongo_host',
             'port': 'mongo_port',

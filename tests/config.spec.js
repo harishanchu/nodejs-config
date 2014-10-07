@@ -134,7 +134,7 @@ describe("nodejs-config", function () {
             var os = require('os');
             var config = require('../index')({development: [os.hostname()]}, __dirname);
             expect(config.environment('development')).toEqual(true);
-            expect(config.environment('staging','development')).toEqual(true);
+            expect(config.environment('staging', 'development')).toEqual(true);
             expect(config.environment('production')).toEqual(false);
         });
     });
