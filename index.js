@@ -11,7 +11,7 @@ var environmentDetector = require('./lib/config/environmentDetector');
 var path = require('path');
 var helper = require('./lib/support/helper');
 
-module.exports = function (environments, configDirPath) {
+module.exports = function (configDirPath, environments) {
     if (!helper.isset(environments))
         environments = {};
 
