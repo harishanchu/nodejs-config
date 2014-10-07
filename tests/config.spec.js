@@ -38,12 +38,17 @@ describe("nodejs-config", function () {
     describe("should have method get and it should", function () {
         it("return a config key value if it exists.", function () {
             var config = require('../index')({}, __dirname);
-            expect(config.get('app.locale')).toEqual("en")
+            expect(config.get('app.locale')).toEqual("en");
         });
 
         it("return a null value if a key doesn't exists in the configuration group.", function () {
             var config = require('../index')({}, __dirname);
             expect(config.get('app.server')).toEqual(null)
+        });
+
+        it("return a provided default value if a key doesn't exists in the configuration group.", function () {
+            var config = require('../index')({}, __dirname);
+            expect(config.get('app.server', 'amazon')).toEqual('amazon')
         });
 
         it("return value of a deep nested key with dot notation.", function () {
@@ -118,10 +123,20 @@ describe("nodejs-config", function () {
         expect(config.getLoader() instanceof require('../lib/config/FileLoader')).toBeTruthy();
     });
 
-    it("should have a method getEnvironment and should return the current environement name", function () {
-        var os = require('os');
-        var config = require('../index')({development: [os.hostname()]}, __dirname);
-        expect(config.getEnvironment() === "development").toBeTruthy();
+    describe("should have a method environment and should", function () {
+        it("return the current environment name when called without arguments", function () {
+            var os = require('os');
+            var config = require('../index')({development: [os.hostname()]}, __dirname);
+            expect(config.environment() === "development").toBeTruthy();
+        });
+
+        it("check whether any of the passed argument is the current configuration environment and return boolean", function () {
+            var os = require('os');
+            var config = require('../index')({development: [os.hostname()]}, __dirname);
+            expect(config.environment('development')).toEqual(true);
+            expect(config.environment('staging','development')).toEqual(true);
+            expect(config.environment('production')).toEqual(false);
+        });
     });
 
     it("should have a method getItems and should return protected variable __items", function () {
