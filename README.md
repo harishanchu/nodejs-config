@@ -18,13 +18,13 @@ npm install nodejs-config
 ##Setup##
 
 You may create multiple configuration files and put group of configurations belongs to same category into a single
-file. Configuration manager lazily load configuration files whenever configuration values that belongs to a particular
+file. Configuration manager lazy load configuration files whenever configuration values that belongs to a particular
 file is requested. When once a configuration file is loaded then it gets cached by the configuration manager and it
 won't load again from the disk whenever configuration belongs to that file is requested again. See the example
-configuration files in the [tests folder](https://github.com/harishanchu/nodejs-config/tests/config) at Github.
+configuration files in the [tests folder](https://github.com/harishanchu/nodejs-config/tests/config).
 
 All of the configuration files for the nodejs-config manager are stored in the config directory. During setup
-up of the configuration manager you can pass the location of your applications configuration directory to the
+up of the configuration manager you can pass the path to location of your applications configuration directory to the
 configuration manager. Along with the configuration directory path you also need to pass an object containing various
 environments you are going to use in you application along with name of the machine's where your application is going
 to execute. Based on the machine's name, configuration manager will determine the current environment and load the
