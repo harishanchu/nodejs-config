@@ -1,0 +1,18 @@
+{
+
+    "debug": false,
+
+    "url": "http://localhost",
+
+    "timezone": "UTC+5.30",
+
+    "locale": "fr",
+
+    "mapping": {
+        "fields": {
+            "second": {
+                "external_id": "subject"
+            }
+        }
+    }
+}

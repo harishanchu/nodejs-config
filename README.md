@@ -19,9 +19,9 @@ npm install nodejs-config
 ##Setup##
 
 All the configurations should be stored in your application within a folder named config. You may create 
-multiple configuration files and put group of configurations belongs to same category into a single file. For example 
-you may keep applications general settings in `config/app.js` and database settings in `config/database.js`.
-See example configuration files at [test folder](https://github.com/harishanchu/nodejs-config/tree/master/tests).
+multiple configuration files(json) and put group of configurations belongs to same category into a single file. For example
+you may keep applications general settings in `config/app.json` and database settings in `config/database.json`.
+See example configuration files at [test folder](https://github.com/harishanchu/nodejs-config/tree/development/tests).
  
 You can setup a new configuration manager instance with following syntax:
  
@@ -62,7 +62,7 @@ var config = require('nodejs-config')(
 
 ####Accessing A Configuration Value####
 
-To access a configuration field `timezoneOffset` from the configuration file 'config/app.js' use following syntax:
+To access a configuration field `timezoneOffset` from the configuration file 'config/app.json' use following syntax:
 
 ```javascript
 config.get('app').timezoneOffset;
@@ -98,14 +98,13 @@ It is easy to accomplish this using environment based configuration.
 
 Simply create a folder within the config directory that matches your environment name, such as local. Next, create the
 configuration files you wish to override and specify the options for that environment. For example, to override the
-timezoneOffset for the local environment, you would create a app.js file in $path/config/local with the following
+timezoneOffset for the local environment, you would create a app.json file in $path/config/local with the following
 content:
 
 ```javascript
-var config = {
-    timezoneOffset: '6.30',    
+{
+    "timezoneOffset": "6.30",
 };
-module.exports = config;
 ```
 Notice that you do not have to specify every option that is in the base configuration file, but only the options you
 wish to override. The environment configuration files will "cascade" over the base files.
