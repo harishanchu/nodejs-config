@@ -1,33 +1,33 @@
 {
-    "name": "nodejs-config",
-    "version": "0.0.1",
-    "description": "An advanced NodeJs configuration loader and manager which can load configuration values based on the development environement.",
-    "main": "index.js",
-    "scripts": {
-        "test": "jasmine-node ./tests"
-    },
-    "dependencies": {
-        "lodash": "~2.4.1"
-    },
-    "devDependencies": {
-        "jasmine-node": "1.3.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/harishanchu/nodejs-config"
-    },
-    "keywords": [
-        "nodejs",
-        "config",
-        "configuration",
-        "environment",
-        "configuration-manager",
-        "environment-detector",
-        "configuration-loader"
-    ],
-    "author": "Harish Anchu <harishanchu@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/harishanchu/nodejs-config/issues"
-    }
+  "name": "nodejs-config",
+  "version": "1.0.0",
+  "description": "An advanced NodeJs configuration loader and manager which can load configuration values based on the development environement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node ./tests"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harishanchu/nodejs-config"
+  },
+  "keywords": [
+    "nodejs",
+    "config",
+    "configuration",
+    "environment",
+    "configuration-manager",
+    "environment-detector",
+    "configuration-loader"
+  ],
+  "author": "Harish Anchu <harishanchu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harishanchu/nodejs-config/issues"
+  }
 }
