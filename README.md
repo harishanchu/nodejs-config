@@ -1,7 +1,7 @@
 nodejs-config
 =============
 
-A [Laravel](http://laravel.com/) inspired advanced NodeJs configuration loader and manager which can load configuration 
+A [Laravel](http://laravel.com/) inspired simple NodeJs configuration loader and manager which can load configuration
 values based on the development environment.
 
 [![Build Status](https://travis-ci.org/harishanchu/nodejs-config.svg?branch=master)](https://travis-ci.org/harishanchu/nodejs-config)
@@ -90,7 +90,7 @@ config.set('database.default', 'mongo');
 
 Configuration values that are set at run-time are only set for life time of the configuration manager instance.
 
-####Environment Specif Configuration####
+####Environment Specific Configuration####
 
 It is often helpful to have different configuration values based on the environment the application is running in. For
 example, you may wish to use a different timezoneOffset on your local development machine than on the production server.
