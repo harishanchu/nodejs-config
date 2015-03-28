@@ -1,7 +1,7 @@
 {
   "name": "nodejs-config",
   "version": "1.0.0",
-  "description": "An advanced NodeJs configuration loader and manager which can load configuration values based on the development environement.",
+  "description": "A Laravel inspired simple NodeJs configuration loader and manager which can load configuration values based on the development environment.",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node ./tests"

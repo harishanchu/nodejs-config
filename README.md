@@ -21,7 +21,7 @@ npm install nodejs-config
 All the configurations should be stored in your application within a folder named config. You may create 
 multiple configuration files(json) and put group of configurations belongs to same category into a single file. For example
 you may keep applications general settings in `config/app.json` and database settings in `config/database.json`.
-See example configuration files at [test folder](https://github.com/harishanchu/nodejs-config/tree/development/tests).
+See example configuration files at [test folder](https://github.com/harishanchu/nodejs-config/tree/master/tests).
  
 You can setup a new configuration manager instance with following syntax:
  
@@ -121,12 +121,12 @@ You may also pass arguments to the environment method to check if the environmen
 
 
 ```javascript
-    if (config.environment('local'))
-    {
-        // The environment is local
-    }    
-    if (config.environment('local', 'staging'))
-    {
-        // The environment is either local OR staging...
-    }
+if (config.environment('local'))
+{
+    // The environment is local
+}
+if (config.environment('local', 'staging'))
+{
+    // The environment is either local OR staging...
+}
 ```
