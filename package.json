@@ -1,6 +1,6 @@
 {
   "name": "nodejs-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Laravel inspired simple NodeJs configuration loader and manager which can load configuration values based on the development environment.",
   "main": "index.js",
   "scripts": {
