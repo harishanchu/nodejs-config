@@ -4,8 +4,9 @@ nodejs-config
 A [Laravel](http://laravel.com/) inspired simple NodeJs configuration loader and manager which can load configuration
 values based on the development environment.
 
+[![npm version](https://badge.fury.io/js/nodejs-config.svg)](http://badge.fury.io/js/nodejs-config)
 [![Build Status](https://travis-ci.org/harishanchu/nodejs-config.svg?branch=master)](https://travis-ci.org/harishanchu/nodejs-config)
-
+[![Quality](https://codeclimate.com/github/harishanchu/nodejs-config/badges/gpa.svg)](https://codeclimate.com/github/harishanchu/nodejs-config)
 
 ##Installation##
 
