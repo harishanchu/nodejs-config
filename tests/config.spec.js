@@ -5,9 +5,11 @@
  * Copyright (c) 2014, Harish Anchu. All rights reserved.
  */
 
+/*global describe, it, expect */
+
 describe("nodejs-config", function () {
     it("should be callable", function () {
-        var config = require('../index')
+        var config = require('../index');
         expect(typeof config).toEqual('function');
     });
 
@@ -43,17 +45,17 @@ describe("nodejs-config", function () {
 
         it("return a null value if a key doesn't exists in the configuration group.", function () {
             var config = require('../index')(__dirname, {});
-            expect(config.get('app.server')).toEqual(null)
+            expect(config.get('app.server')).toEqual(null);
         });
 
         it("return a provided default value if a key doesn't exists in the configuration group.", function () {
             var config = require('../index')(__dirname, {});
-            expect(config.get('app.server', 'amazon')).toEqual('amazon')
+            expect(config.get('app.server', 'amazon')).toEqual('amazon');
         });
 
         it("return value of a deep nested key with dot notation.", function () {
             var config = require('../index')(__dirname, {});
-            expect(config.get('app.mapping.fields.first.external_id')).toEqual('subject')
+            expect(config.get('app.mapping.fields.first.external_id')).toEqual('subject');
         });
 
         it("overwrite default configuration key values based on environment if environment specific configuration " +
@@ -113,9 +115,9 @@ describe("nodejs-config", function () {
 
     it("should have a method __load should set a configuration group value into __items array with key as configuration group", function () {
         var config = require('../index')(__dirname, {});
-        expect(config.__items['app']).toBeFalsy();
+        expect(config.__items.app).toBeFalsy();
         config.__load('app');
-        expect(config.__items['app']).toBeTruthy();
+        expect(config.__items.app).toBeTruthy();
     });
 
     it("should have a method getLoader and should return an instance of lib/config/FileLoader", function () {

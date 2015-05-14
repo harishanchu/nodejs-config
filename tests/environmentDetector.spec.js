@@ -5,16 +5,18 @@
  * Copyright (c) 2014, Harish Anchu. All rights reserved.
  */
 
+/*global describe, it, expect */
+
 describe("environmentDetector", function () {
     it("should be an object.", function () {
-        var environmentDetecor = require('../lib/config/environmentDetector')
+        var environmentDetecor = require('../lib/config/environmentDetector');
         expect(typeof environmentDetecor).toEqual('object');
         expect(typeof environmentDetecor.detect).toEqual("function");
     });
 
     describe("should have a method detect and", function () {
         it("should be callabe", function () {
-            var environmentDetecor = require('../lib/config/environmentDetector')
+            var environmentDetecor = require('../lib/config/environmentDetector');
             expect(typeof environmentDetecor.detect).toEqual("function");
         })
 

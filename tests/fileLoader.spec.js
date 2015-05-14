@@ -5,6 +5,8 @@
  * Copyright (c) 2014, Harish Anchu. All rights reserved.
  */
 
+/*global describe, it, expect */
+
 describe("fileLoader", function () {
     it("should be callable.", function () {
         //todo: note check constructor
